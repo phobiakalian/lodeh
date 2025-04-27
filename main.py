@@ -1,23 +1,32 @@
 from pyrogram import Client, filters
 import asyncio
 
+import random 
 # Konfigurasi akunmu
-api_id = 12345678  # Ganti dengan API ID kamu
-api_hash = "your_api_hash"  # Ganti dengan API Hash kamu
+api_id = 6973446  # Ganti dengan API ID kamu
+api_hash = "d3a6dbd3e466159f7170f6af7fb35ac1"  # Ganti dengan API Hash kamu
 session = "BQBqaAYAeEDq0DsANq8B7-Wt_ddQe0hG4ee859GS1Svws8CeTWXrebXeekUTPy1rG3xRYmYWPrb2jfsBu0AViEyGtKtA7cDLGaw4st-uxfnK35CPH1X680sjIfhG2YlLSuARV2fg2s4LyyHE_mXsZDt2F0V10u7HDPNzt-8-eYko69hNWbmxGt6ZJXgEaKoS8PVCYSuU9_Qk9L_qjl0q2CVt1vWmSefeLDMb6sfadhFG-UD7z7PY8jwa2pahMhDXYzBIekILQEqX0B5e1KUBet-aHKTUyycD9njTplcEZ6nFQV4LdjwK2FZjP6a205gjccw3TqMHI6gEidPMLFzhDRPr4OCBYgAAAAB1B3HOAA"  # Ganti dengan session string kamu
 
 # ID atau username bot anonymous (contoh)
 bot_username = "chatbot"
 
 # ID stiker yang mau dikirim
-sticker_id = "CAACAgUAAxkDAAEFHcJoDm0_l3esQe1BeZ-ZETOEGuBh8gAC0QADyESkOcWkYPEOb5EGHgQ"  # Ganti dengan file_id stikermu
+sticker_id = "CAACAgUAAxkDAAEFHvtoDnfTve9yrixL5v76zLW61hg6kAACMRkAApGMcVR642NGfTJX-R4E"  # Ganti dengan file_id stikermu
 
 app = Client("akak", api_id=api_id, api_hash=api_hash, session_string=session)
 
 # State Tracking
 chatting = False
 current_chat = None
-
+kata_kata = [
+    "Gabung grup sifa dong,nanti ada yang spesial klik stiker diatas",
+    "sifa punya grup,join ya klik stiker diatas",
+    "temenin sifa ngobrol,klik stiker diatas",
+]
+stk = [
+    "CAACAgUAAxkDAAEFHwtoDnmppvmFK4XHPt2uD429wlzGyAACOxUAAgJIeFTLtdY1smEGex4E",
+    "CAACAgUAAxkDAAEFHvtoDnfTve9yrixL5v76zLW61hg6kAACMRkAApGMcVR642NGfTJX-R4E",
+]
 @app.on_message(filters.bot & filters.chat(bot_username))
 async def handle_messages(client, message):
     global chatting, current_chat
@@ -31,10 +40,16 @@ async def handle_messages(client, message):
     if "/next" in message.text.lower():
         chatting = True
         current_chat = message.chat.id
+        
+        stikernya = random.choice(stk)
+        katanya = random.choice(kata_kata)
 
         # Kirim stiker
         await asyncio.sleep(2)  # Biar natural
-        await client.send_sticker(bot_username, sticker_id)
+        await client.send_message(bot_username, "ce")
+        await asyncio.sleep(1)
+        await client.send_sticker(bot_username, stikernya)
+        await client.send_message(bot_username, katanya)
 
         # Tunggu 10 detik, kalau belum di-skip, kita auto skip
         await asyncio.sleep(10)
