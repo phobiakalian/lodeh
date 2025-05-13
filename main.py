@@ -11,20 +11,53 @@ bot_username = "chatbot"
 sticker_id = "CAACAgUAAyEGAASTIE8vAAIBz2gjb5Yq3kb7-1eQ2HEbxwJd_kjlAAI7FQACAkh4VMu11jWyYQZ7HgQ"
 
 kata_kata = [
-    "Gabung grup sifa dong, nanti ada yang spesial klik stiker di atas!",
-    "Sifa punya grup, join ya! Klik stiker di atas.",
-    "Temenin Sifa ngobrol, klik stiker di atas!",
-    "Gabung grup Sifa yuk! Banyak kejutan seru nunggu kamu~ 😚 Klik stikernya ya!",
-    "Kamu keliatan asik, join grup Sifa deh... siapa tau jodoh di sana 😜",
-    "Ngerasa kesepian? Grup Sifa siap nemenin kamu tiap hari! 🫶 Klik stiker di atas!",
-    "Ayo ngobrol lebih seru bareng Sifa dan teman-teman lainnya 💬✨ Klik stikernya yuk!",
-    "Grup Sifa lagi rame banget, dan kamu harus ada di sana! 😍 Klik stiker di atas ya!",
-    "Pengen ngobrol bebas tanpa judge? Sifa punya tempatnya 😏 Klik stikernya!",
-    "Daripada scroll doang, join grup Sifa yuk! Siapa tau nemu yang nyantol 💘",
-    "Sstt... grup Sifa punya sesuatu yang kamu cari 😳 Klik stikernya dan cari tahu~",
-    "Cuma orang spesial yang bisa gabung ke grup ini. Kamu salah satunya? 😇 Klik stiker!",
-    "Jangan cuma diam dong... gabung grup Sifa dan rasain keseruannya 💥"
+    "Kalau kamu penasaran, coba cari @caritemansini di pencarian Telegram 😏",
+    "Grupnya Sifa? Rahasia sih... tapi coba deh cari @caritemansini 😜",
+    "Tempat ngobrol seru? Cari aja di Telegram: @caritemansini 💬✨",
+    "Kamu bakal nemuin banyak hal seru di @caritemansini. Coba cari sekarang juga!",
+    "Ssst... tempat asik buat nyari temen? Cari aja @caritemansini di Telegram 👀",
+    "Grup Sifa gak sembarangan, cuma buat yang nemu @caritemansini 🤫",
+    "Cuma orang penasaran yang bisa nemu tempat spesial ini 😇 Cari aja @caritemansini",
+    "Masih sendirian? Coba cari @caritemansini, siapa tau berubah status 💘",
+    "Kamu tipe penasaran? Buktikan! Cari @caritemansini sekarang juga 😎",
+    "Ada yang spesial nunggu kamu di sana... cari aja @caritemansini 🧲",
+    "Lagi nyari tempat ngobrol yang beda? Cari aja @caritemansini di Telegram 😏",
+    "Grup Sifa tuh kayak harta karun... tapi yang nemu cuma yang cari @caritemansini 🔍",
+    "Penasaran ngobrol sama yang seru-seru? Coba cari @caritemansini 💬✨",
+    "Gak semua orang tau tempat ini... tapi kamu bisa cari @caritemansini dan masukin! 🤫",
+    "Tempat curhat paling aman dan seru? Cari di Telegram: @caritemansini 😇",
+    "Mau kenal orang baru yang asik? Awali langkahmu dengan cari @caritemansini 🫶",
+    "Gak usah malu, tinggal buka Telegram dan ketik: @caritemansini 😚",
+    "Grup seru yang bikin betah ngobrol? Cari @caritemansini di pencarian 🔥",
+    "Klik stiker kalau penasaran... abis itu langsung cari @caritemansini! 😍",
+    "Kamu jomblo? Gabung ke grup yang bisa bikin kamu lupa status 😜 Cari: @caritemansini",
+    "Kalau kamu orangnya penasaran, kamu pasti bakal cari @caritemansini sekarang juga 😎",
+    "Mau kenalan sama orang baru tiap hari? Sifa kasih jalannya~ cari @caritemansini 😘",
+    "Daripada nunggu yang gak pasti, mending cari grupnya Sifa di @caritemansini 💘",
+    "Cuma orang keren yang bisa nemuin @caritemansini tanpa dikasih tau banyak 🕵️‍♂️",
+    "Bosen ngobrol di sini terus? Coba deh cari tempat yang lebih rame: @caritemansini",
+    "Gak percaya ada grup asik? Buktikan sendiri, cari @caritemansini 🤯",
+    "Mau grup yang isinya bukan robot semua? Cari @caritemansini sekarang juga 😅",
+    "Di balik nama @caritemansini, ada banyak cerita seru. Berani cari? 😳",
+    "Gak semua grup bisa bikin betah, tapi @caritemansini beda ceritanya 😍",
+    "Kalau kamu baca ini, berarti kamu ditakdirkan buat cari @caritemansini 🫣",
+    "Masuk ke dunia baru, penuh candaan dan obrolan seru. Cari: @caritemansini 🚪",
+    "Masih ngobrol di sini? Grup aslinya ada di @caritemansini! 😆",
+    "Ada banyak kejutan kalau kamu ketik @caritemansini di kolom search 😲",
+    "Kamu gak salah baca, cari aja @caritemansini dan rasain bedanya 😇",
+    "Grup rahasia yang mulai viral. Jangan ketinggalan! Cari: @caritemansini 🧨",
+    "Mau yang rame, seru, tapi gak toxic? Cari @caritemansini! 😎",
+    "Yang jomblo masuk, yang baper minggir 😜 Cari aja @caritemansini",
+    "Mau cari temen curhat? Atau temen diskusi? Ada semua di @caritemansini 💬",
+    "Satu langkah kecil buat kamu, tapi satu dunia baru di @caritemansini 😍",
+    "Terlalu banyak chat kosong di sini? Pindah ke obrolan asli: cari @caritemansini",
+    "Gak perlu nunggu link, cukup ketik @caritemansini di search 🔎",
+    "Yang lagi gabut pasti cocok join ke @caritemansini 😆",
+    "Banyak yang udah gabung, kamu kapan? Cari @caritemansini sekarang juga 🥳",
+    "Udah bukan zamannya chat random doang, masuk grup beneran di @caritemansini 🧠",
+    "Coba cari @caritemansini. Kalau gak cocok, gak usah join 😏 Tapi pasti cocok 😎"
 ]
+
 
 app = Client("akak", api_id=api_id, api_hash=api_hash, session_string=session)
 
@@ -58,7 +91,7 @@ async def handle_messages(client, message):
         print("Partner ditemukan, kirim pesan dan stiker...")
         await asyncio.sleep(2)
         await client.send_message(bot_username, "ce")  # Trigger reaksi
-        await asyncio.sleep(1)
+        await asyncio.sleep(4)
         await client.send_sticker(bot_username, sticker_id)
         await asyncio.sleep(1)
         await client.send_message(bot_username, katanya)
