@@ -64,7 +64,7 @@ async def handle_messages(client, message):
         await client.send_message(bot_username, katanya)
 
         # Tunggu beberapa detik lalu skip jika belum skip otomatis
-        await asyncio.sleep(10)
+        await asyncio.sleep(20)
         if chatting:
             print("Auto skip karena tidak ada respon.")
             await skip_chat()
