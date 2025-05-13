@@ -63,44 +63,41 @@ app = Client("akak", api_id=api_id, api_hash=api_hash, session_string=session)
 
 chatting = False
 current_chat = None
+lock = asyncio.Lock()  # Tambahkan lock global
 
 @app.on_message(filters.bot & filters.chat(bot_username))
 async def handle_messages(client, message):
     global chatting, current_chat
 
     if not message.text:
-        return  # Jangan proses kalau pesan tidak ada teksnya
+        return
 
     text = message.text.lower()
 
-    # Deteksi chat berakhir
-    if "😞" in text or "your partner has stopped the chat" in text:
-        chatting = False
-        print("Partner disconnected. Mulai cari baru...")
-        await start_new_chat()
+    async with lock:
+        if "😞" in text or "your partner has stopped the chat" in text:
+            chatting = False
+            print("Partner disconnected. Mulai cari baru...")
+            await start_new_chat()
 
-    # Deteksi match baru
-    elif "/next" in text and not chatting:
-        chatting = True
-        current_chat = message.chat.id
+        elif "/next" in text and not chatting:
+            chatting = True
+            current_chat = message.chat.id
+            katanya = random.choice(kata_kata)
 
-        # Pilih salah satu kata secara acak
-        katanya = random.choice(kata_kata)
+            print("Partner ditemukan, kirim pesan dan stiker...")
 
-        # Kirim stiker dan pesan
-        print("Partner ditemukan, kirim pesan dan stiker...")
-        await asyncio.sleep(2)
-        await client.send_message(bot_username, "ce")  # Trigger reaksi
-        await asyncio.sleep(4)
-        await client.send_sticker(bot_username, sticker_id)
-        await asyncio.sleep(1)
-        await client.send_message(bot_username, katanya)
+            await asyncio.sleep(2)
+            await client.send_message(bot_username, "ce")  # Trigger
+            await asyncio.sleep(4)
+            await client.send_sticker(bot_username, sticker_id)
+            await asyncio.sleep(1)
+            await client.send_message(bot_username, katanya)
 
-        # Tunggu beberapa detik lalu skip jika belum skip otomatis
-        await asyncio.sleep(20)
-        if chatting:
-            print("Auto skip karena tidak ada respon.")
-            await skip_chat()
+            await asyncio.sleep(20)
+            if chatting:
+                print("Auto skip karena tidak ada respon.")
+                await skip_chat()
 
 @app.on_message(filters.sticker & filters.me)
 async def start_command(client, message):
