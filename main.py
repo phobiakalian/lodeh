@@ -3,9 +3,9 @@ import asyncio
 import random
 
 # Konfigurasi akunmu
-api_id = 6973446
-api_hash = "d3a6dbd3e466159f7170f6af7fb35ac1"
-session = "BQBqaAYAlRD7Is4yeAS34BC7tMiaPXfqJhhSgodk3cs4mz6n3bR1AfCsixwXlpmCbk1SSDYkXTwRCOG0EGHxge61v39OdazqjHG9SJ2shlaqc-faFIwn7_8cIQnrbPxCURUFEY65NjGdXR1nGWQ_f8o7uqS4nLQ9T0PLi8-uhP1Qb94qMnqpA9zMGl-TYDYspS4I2MLmIIjLDiXv4y4DaAtEMhry3B00BY36pvkbCtL9hd9bwYx1OknJAf_IqN-bLnEIucTIkfrG-2a3_LhCgXzJUonkKwUJQ-9BJT-YYDbNy5BRkgNDlsc4pl6ov2vn2V7PdygTL-axrMLRT_dP7Aj2Dy4_GwAAAAB1B3HOAA"
+api_id = 1234
+api_hash = "0dkjdkjoa"
+session = "1jijeq919jeiqj"
 
 bot_username = "chatbot"
 sticker_id = "CAACAgUAAyEGAASTIE8vAAIBz2gjb5Yq3kb7-1eQ2HEbxwJd_kjlAAI7FQACAkh4VMu11jWyYQZ7HgQ"
